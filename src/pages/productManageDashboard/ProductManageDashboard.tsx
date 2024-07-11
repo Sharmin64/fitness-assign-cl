@@ -1,5 +1,12 @@
+import Header from "../../components/homeComponent/Header";
+
 const ProductManageDashboard = () => {
-  return <div>ProductManageDashboard</div>;
+  return (
+    <div>
+      <Header />
+      ProductManageDashboard
+    </div>
+  );
 };
 
 export default ProductManageDashboard;

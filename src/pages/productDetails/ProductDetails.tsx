@@ -1,5 +1,12 @@
+import Header from "../../components/homeComponent/Header";
+
 const ProductDetails = () => {
-  return <div>ProductDetails</div>;
+  return (
+    <div>
+      <Header />
+      ProductDetails
+    </div>
+  );
 };
 
 export default ProductDetails;

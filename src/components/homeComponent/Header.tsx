@@ -1,74 +1,147 @@
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import muscleImg from "../../assets/icons/muscle-icon.png";
+import Button from "../Buttton";
+import { RxCross1 } from "react-icons/rx";
+
 const Header = () => {
+  type SubmenuItem = {
+    label: string;
+    to: string;
+  };
+  type TDropdownData = {
+    label: string;
+    to?: string;
+    submenu: SubmenuItem[];
+  };
+  const dropdownData: TDropdownData[] = [
+    {
+      label: "CheckOut",
+      to: "/checkout",
+      submenu: [],
+    },
+    {
+      label: "Product",
+      submenu: [
+        { label: "ProductDetails", to: "/productDetails" },
+        { label: "ProductPage", to: "/productPage" },
+        { label: "ProductManageDashboard", to: "/productManagementDeshboard" },
+        { label: "Cart", to: "/cart" },
+      ],
+    },
+    {
+      label: "AboutUs",
+      to: "/aboutUs",
+      submenu: [],
+    },
+  ];
+
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const toggleDropdown = (label: string) => {
+    setDropdownOpen(dropdownOpen === label ? null : label);
+  };
+
+  const toggleMobileDropdown = () => {
+    setMobileDropdownOpen(!mobileDropdownOpen);
+  };
+
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
+    <div className="navbar bg-[#b4d6dd]">
+      <div className="navbar-start relative">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
+          <div
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            role="button"
+            className="btn btn-ghost lg:hidden"
+            onClick={toggleMobileDropdown}
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
+            {mobileDropdownOpen ? (
+              <RxCross1 />
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            )}
+          </div>
+          {mobileDropdownOpen && (
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-xl font-bold text-[#055e71]"
+            >
+              {dropdownData.map((item, index) => (
+                <li key={index}>
+                  {item.submenu.length > 0 ? (
+                    <>
+                      <a onClick={() => toggleDropdown(item.label)}>
+                        {item.label}
+                      </a>
+                      {dropdownOpen === item.label && (
+                        <ul className="p-2 absolute left-0 top-full mt-6 rounded-box shadow-lg z-[1]">
+                          {item.submenu.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              <NavLink to={subItem.to || "#"}>
+                                {subItem.label}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <NavLink to={item.to || "#"}>{item.label}</NavLink>
+                  )}
                 </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+              ))}
+            </ul>
+          )}
         </div>
-        <a className="btn btn-ghost text-xl">CoreMuscles</a>
+
+        <NavLink to="/" className="btn btn-ghost text-2xl">
+          <span className="text-[#4c4c4c]/75 font-bold">Core</span>
+          <span className="font-bold text-[#06768d]/100">Muscles</span>
+          <img src={muscleImg} className="size-16 " />
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+        <ul className="menu menu-horizontal px-1 text-xl font-bold text-[#055e71]">
+          {dropdownData.map((item, index) => (
+            <li key={index}>
+              {item.submenu.length > 0 ? (
+                <>
+                  <a onClick={() => toggleDropdown(item.label)}>{item.label}</a>
+                  {dropdownOpen === item.label && (
+                    <ul className="p-2  absolute left-0 top-full mt-2 rounded-box shadow-lg z-[1]">
+                      {item.submenu.map((subItem, subIndex) => (
+                        <li key={subIndex}>
+                          <NavLink to={subItem.to || "#"}>
+                            {subItem.label}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              ) : (
+                <NavLink to={item.to || "#"}>{item.label}</NavLink>
+              )}
+            </li>
+          ))}
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <Button buttonName="Login" />
       </div>
     </div>
   );
