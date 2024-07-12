@@ -2,7 +2,7 @@ import Header from "../../components/homeComponent/Header";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="bg-amber-300">
       <Header />
       AboutUs
     </div>

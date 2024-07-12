@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import muscleImg from "../../assets/icons/muscle-icon.png";
 import Button from "../Buttton";
 import { RxCross1 } from "react-icons/rx";
+import { HiMenuAlt2 } from "react-icons/hi";
 
 const Header = () => {
   type SubmenuItem = {
@@ -57,38 +58,25 @@ const Header = () => {
             onClick={toggleMobileDropdown}
           >
             {mobileDropdownOpen ? (
-              <RxCross1 />
+              <RxCross1 className="size-7" />
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+              <HiMenuAlt2 className="size-7" />
             )}
           </div>
           {mobileDropdownOpen && (
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-xl font-bold text-[#055e71]"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-xl font-bold text-[#055e71]  "
             >
               {dropdownData.map((item, index) => (
                 <li key={index}>
                   {item.submenu.length > 0 ? (
                     <>
-                      <a onClick={() => toggleDropdown(item.label)}>
+                      <a onBlur={() => toggleDropdown(item.label)}>
                         {item.label}
                       </a>
                       {dropdownOpen === item.label && (
-                        <ul className="p-2 absolute left-0 top-full mt-6 rounded-box shadow-lg z-[1]">
+                        <ul className="p-2 absolute left-0 top-full mt-6 rounded-box shadow-lg z-[1] active:bg-[#83bbc6]">
                           {item.submenu.map((subItem, subIndex) => (
                             <li key={subIndex}>
                               <NavLink to={subItem.to || "#"}>
@@ -122,7 +110,7 @@ const Header = () => {
                 <>
                   <a onClick={() => toggleDropdown(item.label)}>{item.label}</a>
                   {dropdownOpen === item.label && (
-                    <ul className="p-2  absolute left-0 top-full mt-2 rounded-box shadow-lg z-[1]">
+                    <ul className="p-2  absolute left-0 top-full mt-2 rounded-box shadow-lg z-[1] hover:ease-in-out transition-transform bg-[#cde4e8]">
                       {item.submenu.map((subItem, subIndex) => (
                         <li key={subIndex}>
                           <NavLink to={subItem.to || "#"}>

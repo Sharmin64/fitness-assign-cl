@@ -3,7 +3,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "hero-bg": "url('/src/assets/images/gym-banner.webp')",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };

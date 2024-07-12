@@ -2,7 +2,7 @@ import Mainlayout from "./components/layout/Mainlayout";
 
 const App = () => {
   return (
-    <div>
+    <div className="">
       <Mainlayout />
     </div>
   );
