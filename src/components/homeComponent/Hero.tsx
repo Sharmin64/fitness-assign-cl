@@ -40,7 +40,7 @@ const Hero = () => {
             Join the FitZone Community: Experience the support and motivation of
             a community dedicated to fitness and wellness.
           </p>
-          <Button buttonName="Shop Now" />
+          <Button buttonName="ShopNow" />
         </div>
       </div>
     </div>
