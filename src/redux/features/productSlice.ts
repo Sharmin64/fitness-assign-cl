@@ -1,24 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-  category: string;
-  description: string;
-  images: string[];
-  stock: number;
-}
-
-interface ProductsState {
-  products: Product[];
-  loading: boolean;
-  error: string | null;
-  searchTerm: string;
-  selectedCategories: string[];
-  sortOption: "asc" | "desc";
-}
+import { Product, ProductsState } from "../../types";
 
 const initialState: ProductsState = {
   products: [],
