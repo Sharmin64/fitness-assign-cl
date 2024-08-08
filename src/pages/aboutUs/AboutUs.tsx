@@ -5,6 +5,7 @@ import aboutImage from "../../assets/images/3d-gym-equipment_23-2151114219.avif"
 import AboutTeam from "./AboutTeam";
 import AFeature from "./AFeature";
 import { Parallax } from "react-parallax";
+import AboutHistory from "./AboutHistory";
 
 const AboutUs = () => {
   return (
@@ -24,17 +25,7 @@ const AboutUs = () => {
             justifyContent: "center",
           }}
         >
-          <h1 className="text-6xl font-extrabold text-center antialiased  text-white items-center justify-center pt-36">
-            History
-          </h1>
-          <article className="break-words min-w-full justify-center text-wrap font-sans text-2xl italic m-auto p-[1.5em] text-white">
-            Founded in 2010, CoreMuscles began as a small local shop dedicated
-            to providing high-quality fitness equipment and apparel. Over the
-            years, we have grown into a trusted online retailer, serving fitness
-            enthusiasts across the globe. Our commitment to excellence and
-            passion for fitness drives us to continually expand our product
-            range and enhance our customer experience.
-          </article>
+          <AboutHistory />
         </div>
       </Parallax>
       <AFeature />
