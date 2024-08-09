@@ -1,35 +1,25 @@
 // import { Parallax } from "react-parallax";
 import Header from "../../components/homeComponent/Header";
 // import AboutPara from "./AboutPara";
-import aboutImage from "../../assets/images/3d-gym-equipment_23-2151114219.avif";
 import AboutTeam from "./AboutTeam";
 import AFeature from "./AFeature";
-import { Parallax } from "react-parallax";
 import AboutHistory from "./AboutHistory";
+import Footer from "../../components/homeComponent/Footer";
+import AboutPara from "./AboutPara";
 
 const AboutUs = () => {
   return (
     <>
       <Header />
-      <Parallax
-        strength={200}
-        blur={{ min: -15, max: 15 }}
-        bgImage={aboutImage}
-      >
-        <div
-          style={{
-            zIndex: 10,
-            height: "1000px",
-            alignItems: "center",
-            justifyItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <AboutHistory />
-        </div>
-      </Parallax>
+      <AboutHistory />
+      <AboutPara
+        parallaxDetails="  Core Muscles is a fitness brand specializing in home gym equipment. It is our goal to motivate you and provide you with the means to get
+          healthy and Core Muscles Fit"
+      />
       <AFeature />
       <AboutTeam />
+      <AboutPara parallaxDetails="We believe in our products because we use them too" />
+      <Footer />
     </>
   );
 };

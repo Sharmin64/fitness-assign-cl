@@ -48,7 +48,7 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar bg-[#b4d6dd] sticky top-0 left-0">
+    <div className="navbar bg-[#b4d6dd] fixed top-0 left-0 z-50">
       <div className="navbar-start relative">
         <div className="dropdown">
           <div

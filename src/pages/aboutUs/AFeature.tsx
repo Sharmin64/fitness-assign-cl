@@ -1,10 +1,10 @@
 const AFeature = () => {
   return (
-    <div className="mt-12 container h-[20em] mx-auto md:h-[25em] z-10">
+    <div className="mt-12 container sm:h-[20em] mx-auto lg:h-[25em] z-10">
       <div className="bg-base-200 collapse">
         <input type="checkbox" className="peer" />
         <div className="collapse-title bg-[#b3b3b3] text-[#055364] peer-checked:bg-[#1f8498] peer-checked:text-[#ffffff] text-6xl">
-          Watch our feature about Fitness here...
+          Our feature about Fitness!
         </div>
         <div className="collapse-content text-primary-content peer-checked:bg-[#cde4e8] peer-checked:text-[#01181c] flex flex-1">
           <section className="mb-8">
