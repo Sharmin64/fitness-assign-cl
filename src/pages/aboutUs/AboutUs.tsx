@@ -6,19 +6,17 @@ import AFeature from "./AFeature";
 import AboutHistory from "./AboutHistory";
 import Footer from "../../components/homeComponent/Footer";
 import AboutPara from "./AboutPara";
+import Testimonial from "./Testimonial";
 
 const AboutUs = () => {
   return (
     <>
       <Header />
       <AboutHistory />
-      <AboutPara
-        parallaxDetails="  Core Muscles is a fitness brand specializing in home gym equipment. It is our goal to motivate you and provide you with the means to get
-          healthy and Core Muscles Fit"
-      />
+      <AboutPara />
       <AFeature />
       <AboutTeam />
-      <AboutPara parallaxDetails="We believe in our products because we use them too" />
+      <Testimonial />
       <Footer />
     </>
   );
