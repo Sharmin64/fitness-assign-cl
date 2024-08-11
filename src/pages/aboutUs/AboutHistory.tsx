@@ -1,7 +1,7 @@
 const AboutHistory = () => {
   return (
     <>
-      <div className="w-1/2 mx-auto mt-[10em] mb-10 h-auto">
+      <div className="w-[70em] mx-auto mt-[10em] mb-10 h-auto">
         <div className="collapse collapse-plus bg-[#06768d]">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-5xl font-medium text-white">

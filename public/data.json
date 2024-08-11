@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Alice Johnson",
+      "testimonial": "The fitness equipment I purchased from this shop is top-notch! The quality is fantastic, and the customer service was very helpful. I highly recommend it!",
+      "image": "https://i.postimg.cc/9fdymwrC/test-4.jpg"
+    },
+    {
+      "name": "Michael Smith",
+      "testimonial": "I love the variety of products available here. The prices are reasonable, and the shipping was fast. I'm very satisfied with my purchase.",
+      "image": "https://i.postimg.cc/k47KBMb8/test-3.jpg"
+    },
+    {
+      "name": "Sarah Williams",
+      "testimonial": "Excellent service and amazing products! The team helped me choose the right equipment for my home gym, and I couldn't be happier with my decision.",
+      "image": "https://i.postimg.cc/v8qfZsHg/test-1.jpg"
+    },
+    {
+      "name": "David Brown",
+      "testimonial": "Great experience shopping here. The staff is knowledgeable and friendly, and the equipment I bought has significantly improved my workouts. Highly recommended!",
+      "image": "https://i.postimg.cc/ydn99qmG/test-2.jpg"
+    }
+  ]
+  

@@ -17,6 +17,11 @@ const Header = () => {
   };
   const dropdownData: TDropdownData[] = [
     {
+      label: "Home",
+      to: "/",
+      submenu: [],
+    },
+    {
       label: "CheckOut",
       to: "/checkout",
       submenu: [],

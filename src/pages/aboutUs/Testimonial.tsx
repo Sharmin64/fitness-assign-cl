@@ -1,45 +1,53 @@
+// import gsap from "gsap";
+import { useEffect, useState } from "react";
+
+type TTestimonial = {
+  image: string;
+  name: string;
+  testimonial: string;
+};
+
 const Testimonial = () => {
+  const [testimonials, setTestimonials] = useState<TTestimonial[]>([]);
+
+  useEffect(() => {
+    fetch("/data.json")
+      .then((response) => response.json())
+      .then((data) => setTestimonials(data))
+      .catch((error) =>
+        console.error("Error fetching the testimonials:", error)
+      );
+  }, [testimonials]);
+
   return (
     <>
-      <div className="carousel w-full">
-        <div id="item1" className="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-            className="w-full"
-          />
-        </div>
-        <div id="item2" className="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-            className="w-full"
-          />
-        </div>
-        <div id="item3" className="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-            className="w-full"
-          />
-        </div>
-        <div id="item4" className="carousel-item w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-            className="w-full"
-          />
-        </div>
+      <h1 className="text-center text-7xl sm:mb-[1.3em] lg:mb-9 uppercase font-serif bg-gradient-to-r from-[#044755] to-[#9bc8d1] text-transparent bg-clip-text border-t-4 border-b-4">
+        Testimonial of Satisfied Customers
+      </h1>
+
+      <div className="carousel w-full mx-auto h-full">
+        {testimonials.map((testimonial, index) => (
+          <div
+            id={`item${index + 1}`}
+            className="carousel-item w-full flex flex-col items-center text-center bg-[#e6e6e6]"
+            key={index}
+          >
+            <img
+              src={testimonial.image}
+              alt={`Testimonial from ${testimonial.name}`}
+              className="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-lg font-semibold">{testimonial.name}</h3>
+            <p className="text-sm">{testimonial.testimonial}</p>
+          </div>
+        ))}
       </div>
       <div className="flex w-full justify-center gap-2 py-2">
-        <a href="#item1" className="btn btn-xs">
-          1
-        </a>
-        <a href="#item2" className="btn btn-xs">
-          2
-        </a>
-        <a href="#item3" className="btn btn-xs">
-          3
-        </a>
-        <a href="#item4" className="btn btn-xs">
-          4
-        </a>
+        {testimonials.map((_, index) => (
+          <a href={`#item${index + 1}`} className="btn btn-xs" key={index}>
+            {index + 1}
+          </a>
+        ))}
       </div>
     </>
   );

@@ -4,7 +4,7 @@ const ProductDetails = () => {
   return (
     <div>
       <Header />
-      ProductDetails
+      <h1 className="text-7xl mt-60"> ProductDetails</h1>
     </div>
   );
 };

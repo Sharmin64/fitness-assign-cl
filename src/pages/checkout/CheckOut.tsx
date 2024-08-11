@@ -5,7 +5,7 @@ const CheckOut = () => {
     <div>
       <Header />
       <div className="bg-red-400 max-h-svh max-w-screen">
-        CheckOut will bne render here
+        <h1 className="text-7xl mt-60"> CheckOut will bne render here</h1>
       </div>
     </div>
   );

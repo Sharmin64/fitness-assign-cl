@@ -4,7 +4,7 @@ const Cart = () => {
   return (
     <div>
       <Header />
-      Cart
+      <h1 className="text-7xl mt-60">Product will be added here.in the cart</h1>
     </div>
   );
 };

@@ -4,7 +4,7 @@ const ProductPage = () => {
   return (
     <div>
       <Header />
-      ProductPage
+      <h1 className="text-7xl mt-60">Product page will be render here.</h1>
     </div>
   );
 };

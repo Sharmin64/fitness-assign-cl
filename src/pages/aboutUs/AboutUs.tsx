@@ -7,6 +7,7 @@ import AboutHistory from "./AboutHistory";
 import Footer from "../../components/homeComponent/Footer";
 import AboutPara from "./AboutPara";
 import Testimonial from "./Testimonial";
+import AContact from "./AContact";
 
 const AboutUs = () => {
   return (
@@ -17,6 +18,7 @@ const AboutUs = () => {
       <AFeature />
       <AboutTeam />
       <Testimonial />
+      <AContact />
       <Footer />
     </>
   );
