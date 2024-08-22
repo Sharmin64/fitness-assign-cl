@@ -1,0 +1,133 @@
+import { Product } from "../../../types";
+
+export const featuredProducts = [
+  {
+    id: 1,
+    name: "Fitness Tracker",
+    description: "Track your fitness goals and monitor your health.",
+    image: "https://i.postimg.cc/zvZTyMhc/tool-Cycle.jpg",
+    price: 50,
+  },
+  {
+    id: 2,
+    name: "Yoga Mat",
+    description: "Comfortable and durable yoga mat for all your needs.",
+    image: "https://i.postimg.cc/Bbp0M5jg/exercise-and-mat.webp",
+    price: 20,
+  },
+  {
+    id: 3,
+    name: "Dumbbells",
+    description: "High-quality dumbbells for strength training.",
+    image: "https://i.postimg.cc/jjB719MS/toolA.jpg",
+    price: 30,
+  },
+  {
+    id: 4,
+    name: "Fitness Cycle",
+    description: "Track your fitness goals and monitor your health.",
+    image: "https://i.postimg.cc/cCRwwmM4/toolS.jpg",
+    price: 200,
+  },
+  {
+    id: 5,
+    name: "Foam Roller",
+    description: "Comfortable and durable foam roller for all your needs.",
+    image: "https://i.postimg.cc/gc8vCzFF/toolR.jpg",
+    price: 15,
+  },
+  {
+    id: 6,
+    name: "Weight Lifter",
+    description: "High-quality weight lifter for strength training.",
+    image: "https://i.postimg.cc/jdTzKptW/toolF.jpg",
+    price: 100,
+  },
+];
+
+export const allProducts: Product[] = [
+  {
+    id: "1",
+    name: "Fitness Tracker",
+    description: "Track your fitness goals and monitor your health.",
+    image: "https://i.postimg.cc/zvZTyMhc/tool-Cycle.jpg",
+    price: 50,
+  },
+  {
+    id: " 2",
+    name: "Yoga Mat",
+    description: "Comfortable and durable yoga mat for all your needs.",
+    image: "https://i.postimg.cc/C1fjLYR8/tool-Benches.avif",
+    price: 20,
+  },
+  {
+    id: " 3",
+    name: "Dumbbells",
+    description: "High-quality dumbbells for strength training.",
+    image: "https://i.postimg.cc/jjB719MS/toolA.jpg",
+    price: 30,
+  },
+  {
+    id: " 4",
+    name: "Fitness Cycle",
+    description: "Track your fitness goals and monitor your health.",
+    image: "https://i.postimg.cc/cCRwwmM4/toolS.jpg",
+    price: 200,
+  },
+  {
+    id: "5",
+    name: "Foam Roller",
+    description: "Comfortable and durable foam roller for all your needs.",
+    image: "https://i.postimg.cc/gc8vCzFF/toolR.jpg",
+    price: 15,
+  },
+  {
+    id: "6",
+    name: "Weight Lifter",
+    description: "High-quality weight lifter for strength training.",
+    image: "https://i.postimg.cc/jdTzKptW/toolF.jpg",
+    price: 100,
+  },
+  {
+    id: "7",
+    name: "Resistance Bands",
+    description: "Versatile resistance bands for a full-body workout.",
+    image: "https://i.postimg.cc/QdBpNk4X/tool-G.jpg",
+    price: 25,
+  },
+  {
+    id: "8",
+    name: "Kettlebell",
+    description: "Durable kettlebell for strength and cardio training.",
+    image: "https://i.postimg.cc/NfBbwkg4/tool-H.jpg",
+    price: 45,
+  },
+  {
+    id: "9",
+    name: "Pull-Up Bar",
+    description: "Sturdy pull-up bar for upper body workouts.",
+    image: "https://i.postimg.cc/CKr6t7nV/tool-I.jpg",
+    price: 35,
+  },
+  {
+    id: "10",
+    name: "Jump Rope",
+    description: "High-speed jump rope for cardio exercises.",
+    image: "https://i.postimg.cc/9QKm3CfZ/tool-J.jpg",
+    price: 10,
+  },
+  {
+    id: "11",
+    name: "Ab Roller",
+    description: "Effective ab roller for core workouts.",
+    image: "https://i.postimg.cc/RFb9z9ch/tool-K.jpg",
+    price: 20,
+  },
+  {
+    id: "12",
+    name: "Gym Gloves",
+    description: "Comfortable gym gloves for better grip.",
+    image: "https://i.postimg.cc/2SjnVGvx/tool-L.jpg",
+    price: 15,
+  },
+];

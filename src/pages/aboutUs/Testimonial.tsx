@@ -11,13 +11,13 @@ const Testimonial = () => {
   const [testimonials, setTestimonials] = useState<TTestimonial[]>([]);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/testimonials.json")
       .then((response) => response.json())
       .then((data) => setTestimonials(data))
       .catch((error) =>
         console.error("Error fetching the testimonials:", error)
       );
-  }, [testimonials]);
+  }, []);
 
   return (
     <>

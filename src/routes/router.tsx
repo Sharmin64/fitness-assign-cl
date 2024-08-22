@@ -4,9 +4,9 @@ import Home from "../pages/homepage/Home";
 import AboutUs from "../pages/aboutUs/AboutUs";
 import Cart from "../pages/cart/Cart";
 import CheckOut from "../pages/checkout/CheckOut";
-import ProductDetails from "../pages/productDetails/ProductDetails";
-import ProductManageDashboard from "../pages/productManageDashboard/ProductManageDashboard";
-import ProductPage from "../pages/productPage/ProductPage";
+import ProductDetails from "../pages/products/productDetails/ProductDetails";
+import ProductManageDashboard from "../pages/products/productManageDashboard/ProductManageDashboard";
+import ProductPage from "../pages/products/productPage/ProductPage";
 import Login from "../pages/authRoute/Login";
 import Signup from "../pages/authRoute/Signup";
 

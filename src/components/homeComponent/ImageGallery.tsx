@@ -1,5 +1,5 @@
 import { Gallery } from "react-grid-gallery";
-import { images as IMAGES } from "../../images/images";
+import { images as IMAGES } from "../constants/images/images";
 import "./ImageGallery.css";
 
 const ImageGallery = () => {

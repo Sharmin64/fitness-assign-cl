@@ -1,75 +1,54 @@
-// import  useHistory  from "react-router-dom";
-
-// type TCatagories = {
-//   name: string;
-//   image: string;
-// };
-
-// const categories: TCatagories[] = [
-//   {
-//     name: "Dumbbells",
-//     image: "https://example.com/dumbbells.jpg",
-//   },
-//   {
-//     name: "Yoga Mats",
-//     image: "https://example.com/yoga-mats.jpg",
-//   },
-//   {
-//     name: "Resistance Bands",
-//     image: "https://example.com/resistance-bands.jpg",
-//   },
-//   {
-//     name: "Treadmills",
-//     image: "https://example.com/treadmills.jpg",
-//   },
-//   {
-//     name: "Kettlebells",
-//     image: "https://example.com/kettlebells.jpg",
-//   },
-//   {
-//     name: "Foam Rollers",
-//     image: "https://example.com/foam-rollers.jpg",
-//   },
-// ];
+// import { useNavigate } from "react-router-dom";
+// import { Category } from "../../types";
+// import { categories } from "../constants";
+// import AwesomeSlider from "react-awesome-slider";
+// import AwesomeSliderStyles from "react-awesome-slider/src/styled/cube-animation/cube-animation.scss";
+// import "react-awesome-slider/dist/styles.css";
 
 // const Categories = () => {
-//   const history = useHistory();
+//   const navigate = useNavigate();
 
-//   const handleCategoryClick = (category: string) => {
-//     history.push(`/products?category=${category}`);
+//   const handleCategoryClick = (category: Category) => {
+//     navigate("/productPage", { state: { selectedCategory: category } });
 //   };
-
 //   return (
-//     <div className="py-20 bg-white">
-//       <div className="container mx-auto text-center">
-//         <h2 className="text-5xl font-bold mb-10">Product Categories</h2>
-//         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 p-4">
-//           {categories.map((category, index) => (
-//             <div
-//               key={index}
-//               className="category-item cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-//               onClick={() => handleCategoryClick(category.name)}
-//             >
-//               <img
-//                 src={category.image}
-//                 alt={category.name}
-//                 className="w-full h-48 object-cover"
-//               />
-//               <div className="p-4 bg-gray-100">
-//                 <h3 className="text-xl font-semibold">{category.name}</h3>
-//               </div>
+//     <>
+//       <AwesomeSlider cssModule={AwesomeSliderStyles}>
+//         <div className="categories-section py-20 bg-gray-100">
+//           <div className="container mx-auto text-center">
+//             <h2 className="text-5xl font-bold mb-10">Product Categories</h2>
+//             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+//               {categories.map((category) => (
+//                 <div
+//                   key={category.id}
+//                   className="category bg-white p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
+//                   onClick={() => handleCategoryClick(category)}
+//                 >
+//                   <div
+//                     className="category-image mb-5 rounded-lg overflow-hidden bg-center bg-cover h-64"
+//                     style={{
+//                       backgroundImage: `url(${category.image})`,
+//                     }}
+//                   ></div>
+//                   <h3 className="text-3xl font-semibold">{category.name}</h3>
+//                 </div>
+//               ))}
 //             </div>
-//           ))}
+//           </div>
 //         </div>
-//       </div>
-//     </div>
+//       </AwesomeSlider>
+//     </>
 //   );
 // };
 
 // export default Categories;
 
 const Categories = () => {
-  return <div>Categories</div>;
+  return (
+    <div>
+      <h1 className="text-4xl">Categories will be render later</h1>
+    </div>
+  );
 };
 
 export default Categories;

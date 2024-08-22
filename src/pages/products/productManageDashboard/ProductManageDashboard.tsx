@@ -1,4 +1,4 @@
-import Header from "../../components/homeComponent/Header";
+import Header from "../../../components/homeComponent/Header";
 
 const ProductManageDashboard = () => {
   return (

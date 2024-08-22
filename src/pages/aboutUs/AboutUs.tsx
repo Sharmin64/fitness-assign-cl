@@ -17,8 +17,8 @@ const AboutUs = () => {
       <AboutPara />
       <AFeature />
       <AboutTeam />
-      <Testimonial />
       <AContact />
+      <Testimonial />
       <Footer />
     </>
   );

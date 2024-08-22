@@ -1,3 +1,5 @@
+import Button from "../../components/Buttton";
+
 const AContact = () => {
   return (
     <>
@@ -30,7 +32,10 @@ const AContact = () => {
               Connect with us on social media or visit our website to chat with
               our support team. Your feedback helps us improve!
             </p>
-            <button className="btn btn-primary">Contact Us</button>
+            {/* <button className="btn bg-[#519faf] text-[#000000] tex">
+              Contact Us
+            </button> */}
+            <Button buttonName="Contact Us" />
           </div>
         </div>
       </div>
