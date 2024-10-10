@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex flex-wrap justify-between items-center">
             {/* Left side */}
-            <div className="w-full lg:w-1/3 text-center lg:text-left mb-6 lg:mb-0">
+            <div className="w-full lg:w-1/3 text-center lg:text-left mb-6 lg:mb-0 pt-4">
               <ul className="list-none">
                 <li className="mb-2">
                   <a
@@ -137,3 +137,140 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// ?testing purpose
+
+// import navIcon from "../../assets/icons/muscle-icon.png";
+// import expIcon from "../../assets/icons/footerIcon/american-express.png";
+// import appleIcon from "../../assets/icons/footerIcon/apple-pay.png";
+// import googleIcon from "../../assets/icons/footerIcon/google-pay.png";
+// import payPalIcon from "../../assets/icons/footerIcon/paypal.png";
+// import visaIcon from "../../assets/icons/footerIcon/visa.png";
+// import cardIcon from "../../assets/icons/footerIcon/card.png";
+// import cutIcon from "../../assets/icons/footerIcon/drink.png";
+
+// const Footer = () => {
+//   return (
+//     <>
+//       <footer className="bg-[#666666] border-t border-gray-200 py-8">
+//         <div className="container mx-auto px-6 lg:px-8">
+//           {/* Main Flex Container */}
+//           <div className="flex flex-wrap lg:flex-nowrap justify-between items-start space-x-8">
+//             {/* Left side (About Us) */}
+//             <div className="w-full lg:w-1/3 text-center lg:text-left mb-6 lg:mb-0 pt-4">
+//               <ul className="list-none">
+//                 <li className="mb-2">
+//                   <a
+//                     href="#"
+//                     className="text-white text-2xl font-bold hover:text-gray-800"
+//                   >
+//                     About Us
+//                   </a>
+//                 </li>
+//                 <li className="mb-2">
+//                   <a href="#" className="text-white hover:text-gray-800">
+//                     Contact Us
+//                   </a>
+//                 </li>
+//                 <li className="mb-2">
+//                   <a href="#" className="text-white hover:text-gray-800">
+//                     Terms of Service
+//                   </a>
+//                 </li>
+//                 <li className="mb-2">
+//                   <a href="#" className="text-white hover:text-gray-800">
+//                     Shipping Policy
+//                   </a>
+//                 </li>
+//                 <li className="mb-2">
+//                   <a href="#" className="text-white hover:text-gray-800">
+//                     Privacy Policy
+//                   </a>
+//                 </li>
+//                 <li className="mb-2">
+//                   <a href="#" className="text-white hover:text-gray-800">
+//                     Refund Policy
+//                   </a>
+//                 </li>
+//                 <li className="mb-2">
+//                   <a href="#" className="text-white hover:text-gray-800">
+//                     Search
+//                   </a>
+//                 </li>
+//                 <li className="mb-2">
+//                   <a href="#" className="text-white hover:text-gray-800">
+//                     Collab
+//                   </a>
+//                 </li>
+//                 <li className="mb-2">
+//                   <a href="#" className="text-white hover:text-gray-800">
+//                     Blog
+//                   </a>
+//                 </li>
+//               </ul>
+//             </div>
+
+//             {/* Center (Contact Us) */}
+//             <div className="w-full lg:w-1/3 text-center lg:text-center mb-6 lg:mb-0">
+//               <h2 className="text-white text-2xl font-bold mb-2">CONTACT US</h2>
+//               <p className="text-white mb-2">Contact Form</p>
+//               <p className="text-white mb-2">(647)-372-5438</p>
+//               <p className="text-white mb-2">(786)-321-4830</p>
+//               <p className="text-white">support@coremusclegyms.com</p>
+//             </div>
+
+//             {/* Right side (Icons) */}
+//             <div className="w-full lg:w-1/3 text-center lg:text-right">
+//               <div className="flex justify-center lg:justify-end mb-4">
+//                 <img
+//                   src={navIcon}
+//                   alt="coremuscle"
+//                   className="inline-block w-20"
+//                 />
+//               </div>
+//               <div className="flex justify-center lg:justify-end space-x-4">
+//                 <img
+//                   src={googleIcon}
+//                   alt="Google Pay"
+//                   className="inline-block w-10"
+//                 />
+//                 <img
+//                   src={expIcon}
+//                   alt="American Express"
+//                   className="inline-block w-10"
+//                 />
+//                 <img
+//                   src={appleIcon}
+//                   alt="Apple Pay"
+//                   className="inline-block w-10"
+//                 />
+//                 <img
+//                   src={payPalIcon}
+//                   alt="PayPal"
+//                   className="inline-block w-10"
+//                 />
+//                 <img src={visaIcon} alt="Visa" className="inline-block w-10" />
+//                 <img
+//                   src={cardIcon}
+//                   alt="Credit Card"
+//                   className="inline-block w-10"
+//                 />
+//                 <img src={cutIcon} alt="Drink" className="inline-block w-10" />
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Footer Bottom */}
+//           <div className="mt-8 text-center text-xl text-white">
+//             © 2024 Mighty Fitness
+//           </div>
+//           <div className="text-center text-white text-xl">
+//             Powered by Shopify
+//           </div>
+//         </div>
+//       </footer>
+//     </>
+//   );
+// };
+
+// export default Footer;

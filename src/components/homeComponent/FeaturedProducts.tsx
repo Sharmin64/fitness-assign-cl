@@ -21,9 +21,14 @@ const FeaturedProducts = () => {
                   height: "25em",
                   borderRadius: "15px",
                 }}
-              ></div>
+              >
+                <div className="badge bg-[#519faf] text-xl p-2">
+                  $ {product.price}
+                </div>
+              </div>
               <h3 className="text-3xl font-semibold mb-3">{product.name}</h3>
               <p className="mb-5">{product.description}</p>
+
               <Link
                 to={`/product/${product.id}`}
                 className="btn bg-[#cccccc] text-[#06768d] hover:bg-[#519faf] hover:text-[#010c0e] text-xl font-medium"
